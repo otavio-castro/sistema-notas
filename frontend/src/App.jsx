@@ -38,17 +38,23 @@ function App() {
   };
 
   const enviarDados = async () => {
+    if (alunos.length === 0) {
+      alert("É necessário cadastrar pelo menos um aluno antes de enviar os dados.");
+      return;
+    }
+  
     try {
       const response = await axios.post("http://localhost:9090/alunos", {
         alunos,
       });
       setResultado(response.data);
+      alert("Dados enviados com sucesso!");
     } catch (error) {
       console.error("Erro ao enviar os dados:", error);
       alert("Ocorreu um erro ao processar os dados. Tente novamente.");
     }
   };
-
+  
   return (
     <div className="container p-4 bg-dark text-light">
       <h1 className="text-center mb-4">Gestão de Notas e Frequências</h1>
