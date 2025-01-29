@@ -13,7 +13,7 @@ O front-end está hospedado no seguinte link: [Sistema de Notas](https://otavio-
 
 ## Instruções para Executar o Sistema
 
-### 1. Configuração do Back-end (Obrigatório)
+### 1. Configuração do Back-end
 
 1. Certifique-se de ter o [Node.js](https://nodejs.org/pt) instalado.
    
